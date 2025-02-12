@@ -1,11 +1,43 @@
-import React from 'react';
-import Widget from './components/Widget';
+// App.tsx
+import { useState } from 'react';
+import SettingsTab from '../popup/components/SettingsTab';
+import GamesTab from '../popup/components/GamesTab';
+import ChatTab from '../popup/components/ChatTab';
+import { Tab } from '../types';
 
 const App: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<Tab>('settings');
+
   return (
-    <div className='p-4 min-h-96 min-w-96'>
-      <h1 className='text-2xl font-bold'>AdFriend</h1>
-      <Widget />
+    <div className='container mx-auto p-4 w-96 min-h-[500px]'>
+      {/* Tabs Navigation */}
+      <div className='tabs tabs-boxed mb-4'>
+        <button
+          className={`tab ${activeTab === 'settings' ? 'tab-active' : ''}`}
+          onClick={() => setActiveTab('settings')}
+        >
+          ⚙️ Settings
+        </button>
+        <button
+          className={`tab ${activeTab === 'games' ? 'tab-active' : ''}`}
+          onClick={() => setActiveTab('games')}
+        >
+          🎮 Games
+        </button>
+        <button
+          className={`tab ${activeTab === 'chat' ? 'tab-active' : ''}`}
+          onClick={() => setActiveTab('chat')}
+        >
+          💬 Chat
+        </button>
+      </div>
+
+      {/* Render Tab Content */}
+      {activeTab === 'settings' && <SettingsTab />}
+
+      {activeTab === 'games' && <GamesTab />}
+
+      {activeTab === 'chat' && <ChatTab />}
     </div>
   );
 };

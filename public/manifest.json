@@ -3,7 +3,7 @@
   "name": "AdFriend",
   "version": "1.0",
   "description": "Replace boring ads with positive and helpful content!",
-  "permissions": ["storage", "tabs"],
+  "permissions": ["storage", "activeTab"],
   "host_permissions": ["<all_urls>"],
   "background": {
     "service_worker": "background/index.js"
@@ -11,7 +11,8 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content/index.js"]
+      "js": ["content/index.js"],
+      "run_at": "document_idle"
     }
   ],
   "action": {
