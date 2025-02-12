@@ -2,6 +2,7 @@
   "manifest_version": 3,
   "name": "AdFriend",
   "version": "1.0",
+  "author": "Muhammad Bashir Ibrahim ",
   "description": "Replace boring ads with positive and helpful content!",
   "permissions": ["storage", "activeTab"],
   "host_permissions": ["<all_urls>"],
