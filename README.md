@@ -1,50 +1,32 @@
-# React + TypeScript + Vite
+# Documentation: How to Start the App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+To start the application, follow these steps:
 
-Currently, two official plugins are available:
+1. **Clone the repo**: clone the repository from([github](https://github.com/Zaccodder/adFriend))
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. **Install Dependencies**: Ensure you have all the necessary dependencies installed. You can do this by running:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```sh
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+or
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```sh
+yarn install
 ```
+
+3. **Go to open router**: Get your Api Key from ([text](https://openrouter.ai/)) and provide it in the setting section of the app
+
+4. **Build the project**: Using the command below build the extension
+
+```
+npm run build
+
+```
+
+5. **Go to your browser**: Go to ([text](chrome://extensions/)) click on the developer mode to ON it and then click on the load unpack to navigate to the directory where the project and select the dist...load it and then click on the extension of the app to load it.
+
+6. After installing it the extension will monitor any incoming ads coming to any website you visited and it will be displayin nice motivational widget and also it has some other things to look in the pop window.
+
+Author: ([Muhammad Bashir Ibrahim](https://github.com/Zaccodder))
