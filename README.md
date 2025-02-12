@@ -16,7 +16,7 @@ or
 yarn install
 ```
 
-3. **Go to open router**: Get your Api Key from ([text](https://openrouter.ai/)) and provide it in the setting section of the app
+3. **Go to open router**: Get your Api Key from ([open router ai](https://openrouter.ai/)) and provide it in the setting section of the app
 
 4. **Build the project**: Using the command below build the extension
 
